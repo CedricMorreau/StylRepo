@@ -1,0 +1,21 @@
+@import url("https://use.typekit.net/eoc3ugh.css");
+
+@font-face {
+    font-family: avenirMedium;
+    font-weight: 400;
+    src: url(../fonts/AvenirNext-Medium-06.ttf);
+  }
+
+  @font-face {
+    font-family: avenirMediumItalic;
+    font-weight: 400;
+    src: url(../fonts/AvenirNext-MediumItalic-07.ttf);
+  }
+
+  @font-face {
+    font-family: avenirDemiBold;
+    font-weight: 800;
+    src: url(../fonts/AvenirNext-DemiBold-03.ttf);
+  }
+
+
