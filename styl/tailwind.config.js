@@ -14,9 +14,19 @@ module.exports = {
         avenirMediumItalic: "'avenirMediumItalic',sans-serif;'",
         avenirDemiBold: "'avenirDemiBold',sans-serif;'",
       },
-      fill: theme => ({
-        "black": theme("colors.black")
-      }),
+      animation: {
+        slide: 'slide 2s'
+      },
+      keyframes: {
+        slide : {
+          '0%': {
+            transform: 'translateY(-120%) '
+          },
+          '100%': {
+            transform: 'translateY(0)'
+          }
+        }
+      },
     },
   },
   variants: {
