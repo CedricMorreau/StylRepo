@@ -38,8 +38,8 @@ export const getStaticProps = async () => {
 
 export default function Home({ homeContent }) {
   return (
-    <div className="px-8 py-10">
-      <div className="Home-contect_wrapper pt-20 pb-12">
+    <div className="px-8 py-10 bg-offWhite min-h-screen">
+      <div className="Home-contect_wrapper pt-24 pb-14">
         <span className="font-avenirMedium text-5xl text-black">{homeContent.tagline}</span>
       </div>
 
