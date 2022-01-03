@@ -29,7 +29,7 @@ export default function Nav() {
             {isOpen && (
                 <div className="h-screen w-screen absolute z-40 bg-black flex justify-center items-center">
                     <ul className="text-offWhite font-ivy text-5xl">
-                        <li>Home</li>
+                        <Link href="/"><li>Home</li></Link>
                         <Link href="/work"><li className="py-5">Work</li></Link>
                         <li>Approach</li>
                         <li className="py-5">About</li>
