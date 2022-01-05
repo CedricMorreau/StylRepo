@@ -44,7 +44,7 @@ export default function Work({ workContent }) {
             <Nav />
             <div className="px-8 py-10 bg-black min-h-screen text-offWhite">
                 <div className="Home-contect_wrapper pt-28 pb-14">
-                    {workContent.map((work) => <div
+                    {workContent.slice(0).reverse().map((work) => <div
                         key={work.sys.id}
                         className="py-8"
                     >

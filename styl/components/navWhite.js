@@ -31,7 +31,7 @@ export default function Nav() {
                     <ul className="text-black font-ivy text-5xl">
                         <Link href="/"><li>Home</li></Link>
                         <Link href="/work"><li className="py-5">Work</li></Link>
-                        <li>Approach</li>
+                        <Link href="/approach"><li>Approach</li></Link>
                         <li className="py-5">About</li>
                         <li>Contact</li>
                     </ul>
