@@ -1,5 +1,6 @@
 import Nav from "../components/navWhite"
 import { GraphQLClient, gql } from 'graphql-request'
+import Image from 'next/image'
 
 export const getStaticProps = async () => {
     const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/`
@@ -13,13 +14,15 @@ export const getStaticProps = async () => {
     const workContentQuery = gql`
     {
         workCollection{
-          items {
-            heroImage {
+          items{
+            heroImage{
               url
+              width
+              height
             }
             workNumber
             title
-            sys {
+            sys{
               id
             }
           }
@@ -37,8 +40,7 @@ export const getStaticProps = async () => {
 
 
 export default function Work({ workContent }) {
-
-
+  
     return (
         <>
             <Nav />
@@ -48,8 +50,10 @@ export default function Work({ workContent }) {
                         key={work.sys.id}
                         className="py-8"
                     >
-                        <img 
-                            src={work.heroImage.url} 
+                        <Image 
+                            src={work.heroImage.url}
+                            width={work.heroImage.width}
+                            height={work.heroImage.height}
                             alt="Hero image"
                             className="pb-6"
                         />
