@@ -57,11 +57,10 @@ export default function Work({ workContent }) {
                             alt="Hero image"
                             className="pb-6"
                         />
-                        <hr className="bg-offWhite h-0.5 border-0 w-52 rounded-full"
-                        ></hr>
+                        <hr className="bg-offWhite h-0.5 border-0 w-52 rounded-full"></hr>
                         
-                        <div className="pt-3">{work.workNumber}<br /></div>
-                        <div className="pt-2 text-lg">{work.title}</div>
+                        <div className="pt-3 font-avenirMedium">{work.workNumber}<br /></div>
+                        <div className="pt-2 text-lg font-avenirMedium">{work.title}</div>
                     </div>
                     )}
                 </div>

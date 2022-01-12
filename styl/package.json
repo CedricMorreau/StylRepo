@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.11.1",
+    "@contentful/rich-text-types": "^15.11.1",
     "body-scroll-lock": "^4.0.0-beta.0",
     "contentful": "^9.1.5",
     "framer-motion": "^5.4.3",

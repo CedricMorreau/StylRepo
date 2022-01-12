@@ -33,7 +33,7 @@ export default function Nav() {
                         <Link href="/work"><li className="py-5">Work</li></Link>
                         <Link href="/approach"><li>Approach</li></Link>
                         <Link href="/about"><li className="py-5">About</li></Link>
-                        <li>Contact</li>
+                        <Link href="/contact"><li>Contact</li></Link>
                     </ul>
                 </div>
             )}
