@@ -48,18 +48,17 @@ export const getStaticProps = async () => {
 
 const RICHTEXT_OPTIONS = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => {
+    [BLOCKS.PARAGRAPH]: ( node, children) => {
       return <div><p className="font-avenirMedium text-offWhite">{children}</p><br /></div>
     },
     [INLINES.HYPERLINK]: (node, children) => {
-      console.log(node)
       return <a href={node.data.uri} className="font-avenirMedium">{children}</a>
     }
   }
 }
 
 
-export default function Work({ about }) {
+export default function About({ about }) {
 
     return (
         <>

@@ -55,9 +55,8 @@ export default function Work({ workContent }) {
                             width={work.heroImage.width}
                             height={work.heroImage.height}
                             alt="Hero image"
-                            className="pb-6"
                         />
-                        <hr className="bg-offWhite h-0.5 border-0 w-52 rounded-full"></hr>
+                        <hr className="bg-offWhite h-0.5 border-0 w-52 rounded-full mt-2"></hr>
                         
                         <div className="pt-3 font-avenirMedium">{work.workNumber}<br /></div>
                         <div className="pt-2 text-lg font-avenirMedium">{work.title}</div>
