@@ -1,5 +1,8 @@
 import { GraphQLClient, gql } from 'graphql-request'
-import Nav from "../components/navBlack"
+
+import { useContext, useEffect } from 'react';
+import { NavigationContext } from '../context/navigation';
+
 
 export const getStaticProps = async () => {
     const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/`
@@ -33,10 +36,19 @@ export const getStaticProps = async () => {
 }
 
 export default function Approach({ approachContent }) {
+    const [_, setState] = useContext(NavigationContext)
+
+    useEffect(() => {
+      setState({
+        isOpen: false, 
+        colorTheme: "dark"
+      })
+    }, [])
+
 
     return (
         <>
-            <Nav />
+            
             <div className="bg-offWhite min-h-screen">
                 <div className="pt-28">
                     <div className="w-full h-full">

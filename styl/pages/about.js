@@ -1,5 +1,8 @@
-import Nav from "../components/navWhite"
 import { GraphQLClient, gql } from 'graphql-request'
+
+import { useContext, useEffect } from 'react';
+import { NavigationContext } from '../context/navigation';
+
 
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import {BLOCKS, INLINES} from '@contentful/rich-text-types'
@@ -59,10 +62,18 @@ const RICHTEXT_OPTIONS = {
 
 
 export default function About({ about }) {
+  const [_, setState] = useContext(NavigationContext)
+
+    useEffect(() => {
+      setState({
+        isOpen: false, 
+        colorTheme: "light"
+      })
+    }, [])
 
     return (
         <>
-            <Nav />
+            
             <div className="bg-black">
                 <Image
                     src={about.headerImage.url}
